@@ -1,0 +1,13 @@
+.DS_Store
+.env
+creds.env
+*.secret
+*_token.json
+__pycache__/
+node_modules/
+.venv/
+dist/
+build/
+
+# cross-agent oversight bus (local-only, never commit)
+.ai-oversight/

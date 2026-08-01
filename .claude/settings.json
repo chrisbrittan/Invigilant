@@ -1,0 +1,25 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'/Users/chrisbrittan/Development/Mac Management/scripts/oversight/hooks/pretooluse-gate.sh'"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'/Users/chrisbrittan/Development/Mac Management/scripts/oversight/hooks/stop-reader.sh'"
+          }
+        ]
+      }
+    ]
+  }
+}
