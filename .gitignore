@@ -11,3 +11,11 @@ build/
 
 # cross-agent oversight bus (local-only, never commit)
 .ai-oversight/
+
+# Machine-specific agent wiring. Mac Management TRACKS its own copy of this deliberately (it carries
+# the oversight hook paths) but that convention was written for a PRIVATE repo. Here the file
+# hardcodes an absolute path under one developer's home directory: meaningless to anyone who clones
+# this, and needless detail to publish. Regenerate it locally with `oversight init`.
+.claude/settings.json
+.claude/*.bak
+.claude/*.pre-oversight.bak
