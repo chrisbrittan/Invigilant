@@ -119,9 +119,7 @@ M0 prerequisites (all in the platform repo):
 - [x] Relocate platform sugar out of `scripts/oversight/` → `scripts/launchers/` (2026-08-03)
 - [x] Convert `migrate.sh` off `lib/bus.sh` (2026-08-03)
 - [x] Fix generators emitting core-tree paths (2026-08-03; Windows one deferred to M4 for cause)
-- [x] Rebuild the 15 council `.app`s on this machine (2026-08-03, verified 15/15)
-- [ ] Rebuild the second machine's fleet, *then* delete the transitional shim (the launcher
-      bundles are deliberately excluded from sync, so they do not get fixed by pulling)
+- [x] Rebuild the council `.app` fleet + remove the transitional shim (2026-08-03, verified 15/15)
 - [ ] FREEZE both legacy trees
 - [ ] Conformance corpus extraction; legacy-validation runner
 
