@@ -120,8 +120,15 @@ M0 prerequisites (all in the platform repo):
 - [x] Convert `migrate.sh` off `lib/bus.sh` (2026-08-03)
 - [x] Fix generators emitting core-tree paths (2026-08-03; Windows one deferred to M4 for cause)
 - [x] Rebuild the council `.app` fleet + remove the transitional shim (2026-08-03, verified 15/15)
-- [ ] FREEZE both legacy trees
+- [x] **FREEZE both legacy trees** (2026-08-03) — enforced, not declared: a `commit-msg` +
+      `pre-push` guard, deny-by-default over the core root, rehearsed by a 13-case suite.
+      A private fix now needs a `Conformance-Commit:` trailer citing a **public** commit.
 - [ ] Conformance corpus extraction; legacy-validation runner
+
+**The freeze changes how you work in the private repo.** A legacy fix must cite a public
+conformance commit, so the corpus is now on the critical path for *any* legacy change — which is
+the point. Until `conformance/` exists here, the guard cannot verify the citation and says so
+loudly rather than passing silently; legacy-suite coverage is **not** conformance.
 
 ---
 
