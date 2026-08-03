@@ -117,3 +117,11 @@ Invigilant/
 ---
 
 *Last updated: 2026-08-01*
+
+<!-- agent-collab:forward BEGIN (managed by wire-agent-collab.sh) -->
+## Codex Second Opinion (Claude ⇄ Codex)
+
+A **read-only** Codex MCP server is wired into this project (`.mcp.json`), exposing the `codex` / `codex-reply` tools. Codex runs in a read-only sandbox — it can read and analyse this repo but **cannot modify files**.
+
+**Convention:** for any non-trivial design decision, diff review, or debugging conclusion, get a Codex second opinion and reconcile it against your own *before acting*: (1) form your own view first; (2) call `codex`; (3) when it returns, where you **agree** → higher confidence, where you **differ** → adjudicate (don't blindly defer, don't dismiss); (4) report both views + your reconciled conclusion, then act. Use `codex-reply` to follow up in the same thread. `/codex` runs this explicitly; do it proactively for substantive work too.
+<!-- agent-collab:forward END -->
